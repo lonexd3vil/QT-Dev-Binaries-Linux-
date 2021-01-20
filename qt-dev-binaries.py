@@ -79,7 +79,7 @@ def download():
     time.sleep(1)
 
     print("Installing libxcd-xinerama-dev -y")
-    os.system("sudo apt install libxcd-xinerama-dev-y ")
+    os.system("sudo apt install libxcd-xinerama-dev -y ")
     time.sleep(1)
 
     print("Installing libxkbcommon-dev")
@@ -151,7 +151,7 @@ def download():
     time.sleep(1)
 
     print("Installing flite1-dev")
-    os.system("sudo apt instal flite1-dev -y")
+    os.system("sudo apt install flite1-dev -y")
     time.sleep(1)
 
     print("Installing libspeechd-dev")
@@ -183,6 +183,9 @@ def download():
     os.system("sudo apt install x11-xserver-utils -y")
     time.sleep(1)
 
+    print("DOWNLOAD DONE NIGGA")
+    time.sleep(4)
+
 while True:
     print("Do you wish to update system? or start download files")
     ans = input("Yes or No: ")
@@ -193,6 +196,7 @@ while True:
         while True:
             print("May Need authorization! Enter password if promted.")
             os.system("sudo apt update")
+            
             time.sleep(2)
             option = input("Check for Upgrades? - ")
             if option == 'yes' or option == 'Yes':
@@ -202,7 +206,7 @@ while True:
 
             elif option == 'no' or option == 'No':
                 print("Continue without checking for upgrades..")
-        break    
+            break    
         download()
         
 
@@ -211,8 +215,10 @@ while True:
             print("Begin Direct Install")
             download()
             break
+    
 
     else:
         print("Restarting script. Choose option from below.")
         time.sleep(3)
+    break
 
